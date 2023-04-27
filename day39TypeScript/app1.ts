@@ -78,6 +78,7 @@ const updatedBook = {
   const isUpdated = updateBook(updatedBook);
   console.log('the book was updated');
   console.log(isUpdated); // true
+  console.log(findBookById(1));//check if the new book has been updated.
 
 //Define a function removeBook(id: number): 
 //boolean that takes a book id as a parameter
@@ -93,3 +94,6 @@ function removeBook(id:number):boolean {
     }
 return false;
 }
+
+const revmovedBook = removeBook(4);
+console.log(revmovedBook); // false, there is not book 4.

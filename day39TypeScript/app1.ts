@@ -1,3 +1,4 @@
+//Define an interface Book with the following properties:
 interface Book{
     id: number,
     title: string,
@@ -6,6 +7,7 @@ interface Book{
     available: boolean
 }
 
+//Define an interface Book with the following properties:
 const books: Book[] = [];
 
 books.push({
@@ -26,6 +28,7 @@ books.push({
 
 console.log(books);
 
+//Define a function addBook(book: Book): void that takes a Book object as a parameter and adds it to the books array.
 function addBook(book: Book): void {
     books.push(book);
 }
@@ -65,4 +68,28 @@ function updateBook(book: Book): boolean {
     return false;
 }
 }
+const updatedBook = {
+    id: 1,
+    title: "The Silmarilion",
+    author: "J.R.R. Tolkien",
+    published: new Date(1977, 9, 15),
+    available: false,
+  };
+  const isUpdated = updateBook(updatedBook);
+  console.log('the book was updated');
+  console.log(isUpdated); // true
 
+//Define a function removeBook(id: number): 
+//boolean that takes a book id as a parameter
+//and removes the book with the given id from the books array.
+//The function should return true if the book was removed successfully
+// or false if the book was not found.
+
+function removeBook(id:number):boolean {
+    const index = books.findIndex((book) => book.id === id);
+    if (index !== -1) {
+        books.splice(index, 1);
+        return true;
+    }
+return false;
+}

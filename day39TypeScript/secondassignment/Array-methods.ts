@@ -6,7 +6,7 @@ interface User {
     logins: number;
     isPremiumMember: boolean;
   }
-    const users: User[] = [
+    const Users: User[] = [
         {id: 1232, firstName: 'Cam', lastName: 'Danvers', logins: 35, isPremiumMember: false},
         {id: 3283, firstName: 'Elijah', lastName: 'Hawkings', logins: 3, isPremiumMember: true},
         {id: 9283, firstName: 'Ragupathy', lastName: 'Bodem', logins: 12, isPremiumMember: false},
@@ -18,18 +18,18 @@ interface User {
     
     ];
 
-    const userJose: User | undefined = users.find(user => user.firstName === 'Jose');  //Find a user named 'Jose'
+    const userJose: User | undefined = Users.find(user => user.firstName === 'Jose');  //Find a user named 'Jose'
         if (userJose) {
     console.log(userJose.firstName); 
         }
 
-    let premiumMembers = users.filter(user => user.isPremiumMember === true);  //Get an array of all the premium members
+    let premiumMembers = Users.filter(user => user.isPremiumMember === true);  //Get an array of all the premium members
     console.log(premiumMembers);  //Print the number of premium members
 
-    const userlastName = users.map(user => user.lastName);  //Get an array of all the user last names
-    console.log(userlastName);  //Print the last names of all the users
+    const userlastName = Users.map(user => user.lastName);  //Get an array of all the user last names
+    console.log(userlastName);  //Print the last names of all the Users
 
-    const userLogins = users.filter(users=> users.logins > 10) 
+    const userLogins = Users.filter(users=> users.logins > 10) 
       .map(user => user.firstName + ' ' + user.lastName); 
     
       
